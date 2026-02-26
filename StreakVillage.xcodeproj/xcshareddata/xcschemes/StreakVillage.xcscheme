@@ -35,6 +35,20 @@
                ReferencedContainer = "container:StreakVillage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F7B8969E3B83A6E4D41F81A5"
+               BuildableName = "StreakVillageWatch.app"
+               BlueprintName = "StreakVillageWatch"
+               ReferencedContainer = "container:StreakVillage.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
