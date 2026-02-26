@@ -2,6 +2,7 @@ import SwiftUI
 
 struct VillageView: View {
     @EnvironmentObject private var store: VillageStore
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 7)
 
@@ -43,6 +44,7 @@ struct VillageView: View {
                 }
             }
         }
+        .sensoryFeedback(.success, trigger: store.checkedInToday)
     }
 
     // MARK: - Sub-views
@@ -59,10 +61,10 @@ struct VillageView: View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
                 Text("🏘️ Streak Village")
-                    .font(.system(size: 24, weight: .heavy, design: .rounded))
+                    .font(.title2.weight(.heavy))
                     .foregroundStyle(.white)
                 Text("Show up. Build your world.")
-                    .font(.system(size: 13, weight: .medium, design: .rounded))
+                    .font(.subheadline.weight(.medium))
                     .foregroundStyle(.white.opacity(0.5))
             }
             Spacer()
@@ -80,16 +82,20 @@ struct VillageView: View {
         .padding(.vertical, 14)
         .background(.white.opacity(0.07))
         .clipShape(RoundedRectangle(cornerRadius: 16))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Stats")
+        .accessibilityValue("\(store.currentStreak) day streak, best \(store.longestStreak) days, \(store.buildingCount) buildings")
     }
 
     private func statCell(value: Int, label: String, emoji: String) -> some View {
         VStack(spacing: 3) {
-            Text(emoji).font(.system(size: 18))
+            Text(emoji).font(.body)
             Text("\(value)")
-                .font(.system(size: 22, weight: .bold, design: .rounded))
+                .font(.title3.weight(.bold))
                 .foregroundStyle(.white)
+                .contentTransition(.numericText())
             Text(label)
-                .font(.system(size: 10, weight: .medium, design: .rounded))
+                .font(.caption2.weight(.medium))
                 .foregroundStyle(.white.opacity(0.5))
                 .multilineTextAlignment(.center)
         }
@@ -116,7 +122,7 @@ struct VillageView: View {
                             .transition(.opacity)
                     }
                 }
-                .animation(.spring(response: 0.35), value: store.showReaction)
+                .animation(reduceMotion ? .none : .spring(response: 0.35), value: store.showReaction)
             }
             Spacer()
         }
@@ -167,12 +173,13 @@ struct VillageView: View {
             withAnimation(.spring(response: 0.4)) {
                 store.checkInToday()
             }
+            VillageSoundPlayer.shared.playBuildingPlaced()
         } label: {
             Label(
                 store.checkedInToday ? "✓ Checked in today" : "Place today's building",
                 systemImage: store.checkedInToday ? "checkmark.circle.fill" : "plus.square.fill"
             )
-            .font(.system(size: 20, weight: .bold, design: .rounded))
+            .font(.title3.weight(.bold))
             .frame(maxWidth: .infinity)
             .padding(.vertical, 18)
             .background(store.checkedInToday ? Color.green.opacity(0.4) : Color.green)
@@ -181,5 +188,17 @@ struct VillageView: View {
             .shadow(color: store.checkedInToday ? .clear : .green.opacity(0.5), radius: 14, y: 6)
         }
         .disabled(store.checkedInToday)
+        .buttonStyle(SpringPressButtonStyle())
+        .accessibilityLabel(store.checkedInToday ? "Already checked in today" : "Check in for today")
+        .accessibilityHint(store.checkedInToday ? "" : "Places a new building in your village")
+    }
+}
+
+// MARK: - Spring press feedback
+private struct SpringPressButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.96 : 1.0)
+            .animation(.spring(response: 0.25, dampingFraction: 0.6), value: configuration.isPressed)
     }
 }

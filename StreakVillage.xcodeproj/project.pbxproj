@@ -16,6 +16,7 @@
 		8F9C9CE67982C896ADC1A9E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C03EF11F1D52C8134E91AC /* ContentView.swift */; };
 		954B5DF5E36E1423E8DC0D73 /* VillageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CA68750BA3CE70B1BBE4B2 /* VillageView.swift */; };
 		BD7B54C3CF793E9EAF997A9D /* VillageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7708825E7413FCC25D62C44 /* VillageStore.swift */; };
+		EBD01EF3863875EFD15E9C33 /* VillageSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89396963B2698522DA4EA8D6 /* VillageSoundPlayer.swift */; };
 		F51DEC06E3D29F642EAB1038 /* StreakVillageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3443136038A17C1E9AECD7A /* StreakVillageApp.swift */; };
 		F81810B089DCAB5D1A206DA7 /* StreakVillageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E191B292182BDD7443A498 /* StreakVillageTests.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		4EBB2116C6D90F04093DF1CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		564E2886A3BA2E2ECF1AF604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86D5D8CDDF9B84C356A7EDD3 /* StreakVillageWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakVillageWatchApp.swift; sourceTree = "<group>"; };
+		89396963B2698522DA4EA8D6 /* VillageSoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VillageSoundPlayer.swift; sourceTree = "<group>"; };
 		8B58D27D317EA2293330750A /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
 		A2E191B292182BDD7443A498 /* StreakVillageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakVillageTests.swift; sourceTree = "<group>"; };
 		A4A90F47DE67314E473BBEFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				E7708825E7413FCC25D62C44 /* VillageStore.swift */,
+				89396963B2698522DA4EA8D6 /* VillageSoundPlayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,8 +154,6 @@
 			dependencies = (
 			);
 			name = StreakVillage;
-			packageProductDependencies = (
-			);
 			productName = StreakVillage;
 			productReference = 3A46A523739109642A58393B /* StreakVillage.app */;
 			productType = "com.apple.product-type.application";
@@ -169,8 +170,6 @@
 				28E10F81A57FB6EC24422646 /* PBXTargetDependency */,
 			);
 			name = StreakVillageTests;
-			packageProductDependencies = (
-			);
 			productName = StreakVillageTests;
 			productReference = A5E871BF7C95C439B16B39F2 /* StreakVillageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -187,8 +186,6 @@
 			dependencies = (
 			);
 			name = StreakVillageWatch;
-			packageProductDependencies = (
-			);
 			productName = StreakVillageWatch;
 			productReference = 4C6F4750A565D1EA13EB874D /* StreakVillageWatch.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +224,7 @@
 			mainGroup = FEA620333B5B4685C655D495;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
+			productRefGroup = 42556086227D69961C6E9CEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -265,6 +263,7 @@
 				F51DEC06E3D29F642EAB1038 /* StreakVillageApp.swift in Sources */,
 				BD7B54C3CF793E9EAF997A9D /* VillageStore.swift in Sources */,
 				954B5DF5E36E1423E8DC0D73 /* VillageView.swift in Sources */,
+				EBD01EF3863875EFD15E9C33 /* VillageSoundPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
