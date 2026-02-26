@@ -11,11 +11,11 @@
 		18FDD1E92D302F00779E2F21 /* WatchScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D790DCD183B2153618692 /* WatchScreenshotTests.swift */; };
 		1E16362EFDCA264795CE9958 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B58D27D317EA2293330750A /* ScreenshotTests.swift */; };
 		52B751D5C6A637C91E4D82E4 /* StreakVillageWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5D8CDDF9B84C356A7EDD3 /* StreakVillageWatchApp.swift */; };
+		52C3EFCEF000A45EA14ECF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564E2886A3BA2E2ECF1AF604 /* Assets.xcassets */; };
 		74A12B18938205FDA9B8495D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A90F47DE67314E473BBEFA /* ContentView.swift */; };
 		8F9C9CE67982C896ADC1A9E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C03EF11F1D52C8134E91AC /* ContentView.swift */; };
 		954B5DF5E36E1423E8DC0D73 /* VillageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CA68750BA3CE70B1BBE4B2 /* VillageView.swift */; };
 		BD7B54C3CF793E9EAF997A9D /* VillageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7708825E7413FCC25D62C44 /* VillageStore.swift */; };
-		E16733F4FD516B3BCD03BDED /* StreakVillageWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4C6F4750A565D1EA13EB874D /* StreakVillageWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F51DEC06E3D29F642EAB1038 /* StreakVillageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3443136038A17C1E9AECD7A /* StreakVillageApp.swift */; };
 		F81810B089DCAB5D1A206DA7 /* StreakVillageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E191B292182BDD7443A498 /* StreakVillageTests.swift */; };
 /* End PBXBuildFile section */
@@ -28,34 +28,14 @@
 			remoteGlobalIDString = 7A0A38950F5E71F206DDB454;
 			remoteInfo = StreakVillage;
 		};
-		F772AAF0978CF037B519E617 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8900DE5321F7C05F0D570E67 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F7B8969E3B83A6E4D41F81A5;
-			remoteInfo = StreakVillageWatch;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		7B20F7F91207F5DC728F6AD1 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				E16733F4FD516B3BCD03BDED /* StreakVillageWatch.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AA8E0502907FC57D53A81BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3A46A523739109642A58393B /* StreakVillage.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = StreakVillage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6F4750A565D1EA13EB874D /* StreakVillageWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreakVillageWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBB2116C6D90F04093DF1CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		564E2886A3BA2E2ECF1AF604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86D5D8CDDF9B84C356A7EDD3 /* StreakVillageWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakVillageWatchApp.swift; sourceTree = "<group>"; };
 		8B58D27D317EA2293330750A /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
 		A2E191B292182BDD7443A498 /* StreakVillageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakVillageTests.swift; sourceTree = "<group>"; };
@@ -94,6 +74,7 @@
 		467BE61F19B3F75C383622B5 /* StreakVillage */ = {
 			isa = PBXGroup;
 			children = (
+				564E2886A3BA2E2ECF1AF604 /* Assets.xcassets */,
 				A4A90F47DE67314E473BBEFA /* ContentView.swift */,
 				4EBB2116C6D90F04093DF1CB /* Info.plist */,
 				B3443136038A17C1E9AECD7A /* StreakVillageApp.swift */,
@@ -163,6 +144,7 @@
 			buildConfigurationList = 0AAED248C651E3017CFBC485 /* Build configuration list for PBXNativeTarget "StreakVillage" */;
 			buildPhases = (
 				7F10177BCBB4A2E34655B6B4 /* Sources */,
+				9D90F6A81CCB5D11DA4D0321 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -180,13 +162,11 @@
 			buildConfigurationList = 7FF460337FCD008D7C5F927B /* Build configuration list for PBXNativeTarget "StreakVillageTests" */;
 			buildPhases = (
 				EF04CD4513E1F8E551ED5B49 /* Sources */,
-				7B20F7F91207F5DC728F6AD1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				28E10F81A57FB6EC24422646 /* PBXTargetDependency */,
-				F6163BB32CDEA8A46A5A0413 /* PBXTargetDependency */,
 			);
 			name = StreakVillageTests;
 			packageProductDependencies = (
@@ -258,6 +238,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9D90F6A81CCB5D11DA4D0321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C3EFCEF000A45EA14ECF6C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B84CB9FDA86F48E77C85D518 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,11 +294,6 @@
 			isa = PBXTargetDependency;
 			target = 7A0A38950F5E71F206DDB454 /* StreakVillage */;
 			targetProxy = 4DD80E46B53E05FAEC2548B8 /* PBXContainerItemProxy */;
-		};
-		F6163BB32CDEA8A46A5A0413 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7B8969E3B83A6E4D41F81A5 /* StreakVillageWatch */;
-			targetProxy = F772AAF0978CF037B519E617 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -368,7 +351,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20260226.1;
+				CURRENT_PROJECT_VERSION = 20260225.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -426,7 +409,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20260226.1;
+				CURRENT_PROJECT_VERSION = 20260225.1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -523,10 +506,10 @@
 		BFE39E92A9BAF8D9843E5778 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64_32;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260226.1;
+				CURRENT_PROJECT_VERSION = 20260225.1;
 				DEVELOPMENT_TEAM = RZWT5WST77;
 				INFOPLIST_FILE = Sources/StreakVillageWatch/Info.plist;
 				MARKETING_VERSION = 1.0.0;
@@ -543,10 +526,10 @@
 		FFBA9349231F0268DC99B030 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64_32;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260226.1;
+				CURRENT_PROJECT_VERSION = 20260225.1;
 				DEVELOPMENT_TEAM = RZWT5WST77;
 				INFOPLIST_FILE = Sources/StreakVillageWatch/Info.plist;
 				MARKETING_VERSION = 1.0.0;
